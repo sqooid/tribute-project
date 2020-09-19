@@ -1,0 +1,115 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+    #main {
+        background-color: hsl(0, 0%, 95%);
+        font-family: "Roboto Slab", sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        place-content: center center;
+    }
+    
+    #header {
+        margin: -10px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: button-rainbow 15s ease infinite;
+        color: white;
+        justify-self: stretch;
+    }
+
+    #title {
+        border: 1px solid transparent;
+    }
+
+    #img-div {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        place-items: center center;
+    }
+
+    #image{
+        flex: 0 1;
+        max-height: 100%;
+        height: auto;
+        max-width: 100%;
+        width: auto;
+    }
+
+    #img-caption {
+        font-style: italic;
+    }
+
+    #tribute-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info-list {
+        text-align: left;
+        grid-column: 2/3;
+        position: relative;
+    }
+
+    .info-list::before {
+        content: "";
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: linear-gradient(-45deg, #ebb, #bee);
+        position: absolute;
+        left: -20px;
+        top: 8px;
+    }
+
+    .link-button {
+        margin: auto;
+        border-radius: 10px;
+        background: linear-gradient(-45deg, #daa, #add);
+        color: white;
+        padding: 8px 10px 12px 10px;
+    }
+
+    .link-button:hover {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: button-rainbow 15s ease infinite;
+    }
+
+    @keyframes button-rainbow {
+        0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+    }
+</style>
+
+<body id="main">
+  <div id="header">
+    <h1 id="title">Lucas Hou-Wen Liu</h1>
+    <p>The man.</p>
+  </div>
+  <div id="img-div">
+    <img id="image" src="https://static.boredpanda.com/blog/wp-content/uploads/2015/03/Teletubbies-in-Black-White-Look-Like-A-Horror-Show__700.jpg">
+    <p id="img-caption">
+        A testament to his adolescent state of mind.
+    </p>
+  </div>
+  <div id="tribute-info">
+    <p class="info-list"><b>2001</b> This human is given birth to</p>
+    <p class="info-list"><b>2005</b> This human goes to prep</p>
+    <p class="info-list"><b>2012</b> This human goes to high school</p>
+    <p class="info-list"><b>2020</b> This human goes to univeristy</p>
+  </div>
+  <a class="link-button" href="https://github.com/sqooid" target="_blank">Learn more</a>
+</body>
